@@ -8,6 +8,22 @@
       name="description"
       content="2026年5月4日開催の松田家BBQパーティ開催案内LPです。"
     />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="松田家 BBQ PARTY 2026" />
+    <meta
+      property="og:description"
+      content="2026年5月4日開催の松田家BBQパーティ開催案内LPです。"
+    />
+    <meta property="og:image" content="assets/line-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="632" />
+    <meta property="og:image:height" content="435" />
+    <meta property="og:image:alt" content="松田家 BBQ PARTY 2026 のメインビジュアル" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/line-preview.png" />
+    <link rel="icon" type="image/png" href="assets/line-preview.png" />
+    <link rel="apple-touch-icon" href="assets/line-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -613,6 +629,38 @@
         gap: 18px;
       }
 
+      .photo-showcase {
+        margin-top: 28px;
+        padding: 20px;
+        border: var(--line);
+        background: rgba(255, 248, 224, 0.88);
+        box-shadow: var(--shadow);
+      }
+
+      .photo-frame {
+        overflow: hidden;
+        border: var(--line);
+        background: #fff;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .photo-frame img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .photo-caption {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border: 3px solid var(--ink);
+        background: #fffdf7;
+        box-shadow: var(--shadow-sm);
+        font-weight: 700;
+        line-height: 1.8;
+        text-align: center;
+      }
+
       .flow-card {
         padding: 24px 22px;
         border: var(--line);
@@ -997,6 +1045,21 @@
                   <strong>締めまで楽しい</strong>
                   <p>焼きマシュマロや甘いものなど、最後まで火を囲んで楽しめる一日仕様です。</p>
                 </article>
+              </div>
+
+              <div class="photo-showcase">
+                <div class="photo-frame">
+                  <img
+                    src="assets/bbq-group-photo.jpg"
+                    alt="みんなでBBQを楽しんでいる集合写真"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="photo-caption">
+                  火を囲んで、食べて、しゃべって、集まる時間のイメージ。
+                  今回のBBQも、こんな空気感でゆるく楽しむ予定です。
+                </div>
               </div>
             </div>
           </div>
