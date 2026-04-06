@@ -819,12 +819,38 @@
           padding: 24px 0;
         }
 
-        .countdown-grid,
         .detail-grid,
         .menu-grid,
         .notice-grid,
         .flow-grid {
           grid-template-columns: 1fr;
+        }
+
+        .countdown {
+          padding: 18px 12px 22px;
+        }
+
+        .countdown-head {
+          margin-bottom: 14px;
+          font-size: 1rem;
+        }
+
+        .countdown-grid {
+          grid-template-columns: repeat(4, minmax(58px, 1fr));
+          gap: 8px;
+        }
+
+        .count-box {
+          gap: 6px;
+        }
+
+        .count-box strong {
+          padding: 14px 4px;
+          font-size: clamp(1.2rem, 4.2vw, 1.6rem);
+        }
+
+        .count-box span {
+          font-size: 0.8rem;
         }
 
         .poster {
@@ -924,7 +950,6 @@
           </div>
 
           <div class="hero-actions">
-            <button class="button" type="button" id="calendarButton">5/4をカレンダーに追加</button>
             <button class="button alt" type="button" id="copyButton">参加メッセージをコピー</button>
           </div>
 
@@ -959,11 +984,11 @@
 
               <article class="detail-card">
                 <div class="label">会場案内</div>
-                <p class="big">OUTDOOR<br />BBQ SPOT</p>
-                <p class="subline">屋外で炭火を囲むスタイル</p>
+                <p class="big">松田家<br />BBQ SPOT</p>
+                <p class="subline">会場は松田家で開催</p>
                 <div class="detail-note">
-                  正確な場所は参加メンバーに個別共有します。
-                  雨天時も無理なく集まれるよう調整予定です。
+                  会場は松田家で決定です。
+                  当日の細かな案内は参加メンバーへ共有します。
                 </div>
               </article>
 
@@ -973,7 +998,6 @@
                 <p class="subline">途中参加や差し入れも歓迎</p>
                 <div class="pill-row">
                   <span class="pill">家族参加OK</span>
-                  <span class="pill">友だち参加OK</span>
                   <span class="pill">差し入れ歓迎</span>
                 </div>
               </article>
@@ -1099,10 +1123,9 @@
               <h2>2026年5月4日、BBQの日にしておいてください。</h2>
               <p>
                 まずは予定を押さえておけば十分です。
-                カレンダーに追加して、参加メッセージをそのまま幹事へ送れるようにしてあります。
+                参加メッセージをそのまま幹事へ送れるようにしてあります。
               </p>
               <div class="cta-actions">
-                <button class="button" type="button" id="calendarButtonBottom">カレンダーに追加</button>
                 <button class="button alt" type="button" id="copyButtonBottom">参加メッセージをコピー</button>
               </div>
               <div class="status" id="statusMessage" aria-live="polite"></div>
@@ -1155,37 +1178,6 @@
         countdownIds.seconds.textContent = pad(seconds);
       }
 
-      function buildIcs() {
-        return [
-          "BEGIN:VCALENDAR",
-          "VERSION:2.0",
-          "PRODID:-//Matsuda Family BBQ//JP",
-          "CALSCALE:GREGORIAN",
-          "BEGIN:VEVENT",
-          "UID:matsuda-bbq-20260504@example.com",
-          "DTSTAMP:20260406T000000Z",
-          "DTSTART;VALUE=DATE:20260504",
-          "DTEND;VALUE=DATE:20260505",
-          "SUMMARY:松田家 BBQ PARTY",
-          "DESCRIPTION:2026年5月4日に開催する松田家BBQパーティです。",
-          "END:VEVENT",
-          "END:VCALENDAR",
-        ].join("\r\n");
-      }
-
-      function downloadCalendar() {
-        const blob = new Blob([buildIcs()], { type: "text/calendar;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const anchor = document.createElement("a");
-        anchor.href = url;
-        anchor.download = "matsuda-bbq-party-2026-05-04.ics";
-        document.body.appendChild(anchor);
-        anchor.click();
-        anchor.remove();
-        URL.revokeObjectURL(url);
-        setStatus("カレンダーファイルをダウンロードしました。");
-      }
-
       async function copyMessage() {
         const text =
           "5/4の松田家BBQ、参加予定です。詳細連絡をお願いします。";
@@ -1201,11 +1193,6 @@
       function setStatus(message) {
         document.getElementById("statusMessage").textContent = message;
       }
-
-      [
-        "calendarButton",
-        "calendarButtonBottom",
-      ].forEach((id) => document.getElementById(id).addEventListener("click", downloadCalendar));
 
       ["copyButton", "copyButtonBottom"].forEach((id) =>
         document.getElementById(id).addEventListener("click", copyMessage)
