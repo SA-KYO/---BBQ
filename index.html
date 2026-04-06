@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>松田家 BBQ PARTY 2026</title>
+    <meta
+      name="description"
+      content="2026年5月4日開催の松田家BBQパーティ開催案内LPです。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-top: #f9ea88;
+        --bg-mid: #ffd54b;
+        --bg-bottom: #ffb928;
+        --paper: #fff8e7;
+        --panel: #fffdf7;
+        --ink: #121212;
+        --accent: #da1d23;
+        --accent-dark: #921116;
+        --orange: #ff7b1c;
+        --gold: #ffcf48;
+        --brown: #552d19;
+        --shadow: 8px 8px 0 #121212;
+        --shadow-sm: 5px 5px 0 #121212;
+        --line: 4px solid #121212;
+        --max-width: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN",
+          "Yu Gothic", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.5), transparent 20%),
+          radial-gradient(circle at 88% 8%, rgba(255, 255, 255, 0.42), transparent 18%),
+          repeating-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.08) 0,
+            rgba(255, 255, 255, 0.08) 14px,
+            rgba(255, 209, 73, 0.08) 14px,
+            rgba(255, 209, 73, 0.08) 28px
+          ),
+          linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 45%, var(--bg-bottom) 100%);
+        overflow-x: hidden;
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        inset: auto auto 8% -6%;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        border: 18px solid rgba(255, 255, 255, 0.08);
+        filter: blur(2px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::after {
+        inset: 10% -4% auto auto;
+        width: 180px;
+        height: 180px;
+        border-width: 12px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .page-shell {
+        position: relative;
+        z-index: 1;
+      }
+
+      .container {
+        width: min(calc(100% - 32px), var(--max-width));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 32px 0;
+      }
+
+      .section-title {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+        margin-bottom: 28px;
+        text-align: center;
+      }
+
+      .section-title .kicker {
+        font-size: 0.9rem;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: clamp(1.7rem, 2.2vw, 2.5rem);
+        line-height: 1.38;
+        letter-spacing: 0.04em;
+      }
+
+      .section-title .bar {
+        width: 84px;
+        height: 6px;
+        background: var(--ink);
+      }
+
+      .hero {
+        position: relative;
+        padding: 40px 0 28px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 14% 0;
+        background:
+          radial-gradient(circle at 50% 15%, rgba(255, 245, 201, 0.72), transparent 22%),
+          linear-gradient(180deg, rgba(255, 212, 72, 0.35), rgba(255, 173, 31, 0.15));
+        pointer-events: none;
+      }
+
+      .hero-landscape {
+        position: absolute;
+        inset: auto 0 2% 0;
+        height: 180px;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .hero-landscape .hill {
+        position: absolute;
+        bottom: 0;
+        border-radius: 50%;
+        background: rgba(89, 74, 29, 0.14);
+      }
+
+      .hero-landscape .hill.one {
+        left: -10%;
+        width: 58%;
+        height: 120px;
+      }
+
+      .hero-landscape .hill.two {
+        right: -5%;
+        width: 64%;
+        height: 150px;
+      }
+
+      .hero-landscape .hill.three {
+        left: 25%;
+        width: 34%;
+        height: 90px;
+        background: rgba(89, 74, 29, 0.1);
+      }
+
+      .hero-wrap {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 18px;
+        border: 3px solid var(--ink);
+        background: rgba(255, 251, 233, 0.88);
+        box-shadow: var(--shadow-sm);
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before,
+      .eyebrow::after {
+        content: "////";
+        letter-spacing: -0.08em;
+        color: var(--accent);
+      }
+
+      .poster {
+        position: relative;
+        width: min(100%, 450px);
+        padding: 18px;
+        border: 6px solid var(--accent);
+        background: linear-gradient(180deg, #d80d1d 0%, #ba1019 100%);
+        box-shadow: var(--shadow);
+        animation: riseIn 0.8s ease-out both;
+      }
+
+      .poster::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border: 3px solid rgba(255, 240, 195, 0.95);
+        pointer-events: none;
+      }
+
+      .poster::after {
+        content: "";
+        position: absolute;
+        inset: 20px;
+        border: 2px dashed rgba(255, 240, 195, 0.7);
+        pointer-events: none;
+      }
+
+      .poster-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        color: #ffeec7;
+        font-size: 0.92rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+
+      .poster-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border: 2px solid #ffeec7;
+      }
+
+      .poster h1 {
+        margin: 18px 0 12px;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.3rem);
+        line-height: 1.28;
+        letter-spacing: 0.04em;
+        color: #ffe28b;
+        text-shadow:
+          0 3px 0 #6d2d10,
+          3px 3px 0 #1a1a1a;
+      }
+
+      .poster h1 span {
+        display: block;
+        color: #fff7ea;
+        font-size: 0.75em;
+        margin-top: 8px;
+      }
+
+      .poster-sub {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 16px;
+        color: #fff8e1;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .poster-date {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        color: #fff3cb;
+        font-weight: 900;
+      }
+
+      .poster-date strong {
+        display: inline-block;
+        padding: 8px 18px;
+        border-top: 2px dotted rgba(255, 243, 203, 0.8);
+        border-bottom: 2px dotted rgba(255, 243, 203, 0.8);
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        letter-spacing: 0.08em;
+      }
+
+      .hero-copy {
+        width: min(100%, 740px);
+        display: grid;
+        gap: 18px;
+        justify-items: center;
+      }
+
+      .hero-copy p {
+        margin: 0;
+        font-size: clamp(1rem, 1.55vw, 1.2rem);
+        line-height: 1.9;
+        font-weight: 700;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .tag {
+        padding: 10px 14px;
+        border: 3px solid var(--ink);
+        background: rgba(255, 249, 234, 0.88);
+        box-shadow: var(--shadow-sm);
+        font-weight: 900;
+      }
+
+      .countdown {
+        width: min(100%, 760px);
+        padding: 22px 22px 26px;
+        border: var(--line);
+        background: rgba(255, 253, 245, 0.93);
+        box-shadow: var(--shadow);
+      }
+
+      .countdown-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-weight: 900;
+        font-size: 1.1rem;
+      }
+
+      .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .count-box {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+      }
+
+      .count-box strong {
+        width: 100%;
+        padding: 18px 6px;
+        border: var(--line);
+        background: linear-gradient(180deg, #ffd965 0%, #ffbf28 100%);
+        box-shadow: var(--shadow-sm);
+        font-size: clamp(1.7rem, 3vw, 2.6rem);
+        line-height: 1;
+        color: var(--accent);
+      }
+
+      .count-box span {
+        font-size: 0.92rem;
+        font-weight: 900;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-width: 220px;
+        padding: 16px 22px;
+        border: var(--line);
+        background: linear-gradient(180deg, #ffda61 0%, #ffc132 100%);
+        box-shadow: var(--shadow-sm);
+        font-weight: 900;
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          filter 0.18s ease;
+      }
+
+      .button.alt {
+        background: linear-gradient(180deg, #fffdfa 0%, #ffe8cd 100%);
+      }
+
+      .button:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 7px 7px 0 #121212;
+        filter: saturate(1.03);
+      }
+
+      .micro-copy {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: rgba(18, 18, 18, 0.78);
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .detail-card {
+        padding: 26px;
+        border: var(--line);
+        background: rgba(255, 205, 61, 0.44);
+        box-shadow: var(--shadow);
+        animation: riseIn 0.75s ease-out both;
+      }
+
+      .detail-card:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+
+      .detail-card:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+
+      .detail-card .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+        color: var(--accent);
+        font-weight: 900;
+        font-size: 1.15rem;
+      }
+
+      .detail-card .big {
+        margin: 0 0 10px;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        line-height: 1.32;
+        letter-spacing: 0.03em;
+      }
+
+      .detail-card .subline {
+        margin: 0 0 18px;
+        font-weight: 900;
+        font-size: 1.03rem;
+      }
+
+      .detail-note,
+      .mini-panel {
+        padding: 14px 16px;
+        border: 3px solid var(--ink);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .detail-note {
+        line-height: 1.8;
+        font-weight: 700;
+      }
+
+      .stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        padding: 10px 12px;
+        border: 3px solid var(--ink);
+        background: #fff3d1;
+        font-weight: 900;
+        box-shadow: 4px 4px 0 #121212;
+      }
+
+      .notice-panel {
+        margin-top: 22px;
+        padding: 24px;
+        border: var(--line);
+        background: #ffd04d;
+        box-shadow: var(--shadow);
+      }
+
+      .notice-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .notice-card {
+        padding: 16px;
+        border: 3px solid var(--ink);
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .notice-card strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 0.98rem;
+      }
+
+      .highlight-section {
+        padding-top: 20px;
+      }
+
+      .callout-panel {
+        padding: 28px;
+        border: var(--line);
+        background: rgba(255, 202, 49, 0.5);
+        box-shadow: var(--shadow);
+      }
+
+      .headline-box {
+        padding: 28px 24px;
+        border: var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .headline-box h3 {
+        margin: 0;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: clamp(1.7rem, 3vw, 2.8rem);
+        line-height: 1.48;
+        letter-spacing: 0.03em;
+        color: var(--accent);
+      }
+
+      .headline-box p {
+        margin: 14px 0 0;
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      .menu-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .menu-card {
+        position: relative;
+        padding: 20px 18px;
+        border: 3px solid var(--ink);
+        background: linear-gradient(180deg, #fffef7 0%, #ffeec7 100%);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+      }
+
+      .menu-card::before {
+        content: "";
+        position: absolute;
+        inset: auto -18% -44px auto;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: rgba(255, 196, 0, 0.18);
+      }
+
+      .menu-card .menu-icon {
+        font-size: 1.75rem;
+      }
+
+      .menu-card strong {
+        display: block;
+        margin: 10px 0 8px;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.45;
+        letter-spacing: 0.02em;
+      }
+
+      .menu-card p {
+        position: relative;
+        margin: 0;
+        line-height: 1.75;
+        font-weight: 700;
+      }
+
+      .flow-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .flow-card {
+        padding: 24px 22px;
+        border: var(--line);
+        background: #fff7dc;
+        box-shadow: var(--shadow);
+      }
+
+      .flow-card .step {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        border: 3px solid var(--ink);
+        background: #ffd24f;
+        font-weight: 900;
+        box-shadow: 4px 4px 0 #121212;
+      }
+
+      .flow-card h3 {
+        margin: 0 0 10px;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.45;
+        letter-spacing: 0.02em;
+      }
+
+      .flow-card p {
+        margin: 0;
+        line-height: 1.8;
+        font-weight: 700;
+      }
+
+      .final-cta {
+        padding: 14px 0 42px;
+      }
+
+      .cta-panel {
+        position: relative;
+        padding: 34px 28px;
+        border: 5px solid var(--ink);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.18) 25%, transparent 25%) -12px 0/24px
+            24px,
+          linear-gradient(225deg, rgba(255, 255, 255, 0.18) 25%, transparent 25%) -12px 0/24px
+            24px,
+          linear-gradient(315deg, rgba(255, 255, 255, 0.18) 25%, transparent 25%) 0 0/24px 24px,
+          linear-gradient(45deg, rgba(255, 255, 255, 0.18) 25%, transparent 25%) 0 0/24px 24px,
+          linear-gradient(180deg, #cf1e23 0%, #aa1118 100%);
+        box-shadow: var(--shadow);
+        color: #fff9e8;
+        text-align: center;
+      }
+
+      .cta-panel::before,
+      .cta-panel::after {
+        content: "GRILL";
+        position: absolute;
+        top: -18px;
+        padding: 6px 12px;
+        border: 3px solid var(--ink);
+        background: var(--gold);
+        color: var(--ink);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .cta-panel::before {
+        left: 20px;
+      }
+
+      .cta-panel::after {
+        right: 20px;
+        content: "SMOKE";
+      }
+
+      .cta-panel h2 {
+        margin: 0 0 14px;
+        font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        line-height: 1.48;
+        letter-spacing: 0.03em;
+      }
+
+      .cta-panel p {
+        width: min(100%, 700px);
+        margin: 0 auto;
+        line-height: 1.85;
+        font-weight: 700;
+      }
+
+      .cta-actions {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .cta-actions .button {
+        color: var(--ink);
+      }
+
+      .status {
+        min-height: 24px;
+        margin-top: 16px;
+        font-size: 0.95rem;
+        font-weight: 900;
+        color: #fff3d1;
+      }
+
+      footer {
+        padding: 14px 0 36px;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.93rem;
+        font-weight: 700;
+        color: rgba(18, 18, 18, 0.75);
+      }
+
+      @keyframes riseIn {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 940px) {
+        .detail-grid,
+        .menu-grid,
+        .notice-grid,
+        .flow-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero {
+          padding-top: 28px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        :root {
+          --shadow: 6px 6px 0 #121212;
+          --shadow-sm: 4px 4px 0 #121212;
+        }
+
+        .section {
+          padding: 24px 0;
+        }
+
+        .countdown-grid,
+        .detail-grid,
+        .menu-grid,
+        .notice-grid,
+        .flow-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .poster {
+          padding: 16px;
+        }
+
+        .hero-copy p {
+          font-size: 0.98rem;
+        }
+
+        .button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .cta-panel {
+          padding: 32px 18px 26px;
+        }
+
+        .cta-panel::before,
+        .cta-panel::after {
+          top: -14px;
+          font-size: 0.7rem;
+        }
+
+        .eyebrow {
+          padding: 10px 14px;
+          font-size: 0.84rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-landscape" aria-hidden="true">
+          <div class="hill one"></div>
+          <div class="hill two"></div>
+          <div class="hill three"></div>
+        </div>
+        <div class="container hero-wrap">
+          <div class="eyebrow">FAMILY COOKOUT 2026</div>
+
+          <div class="poster">
+            <div class="poster-top">
+              <span class="poster-badge">CHARCOAL FIRE</span>
+              <span>GOLDEN WEEK SPECIAL</span>
+            </div>
+            <h1>
+              松田家
+              <span>BBQ PARTY</span>
+            </h1>
+            <div class="poster-sub">
+              <span>SMOKE</span>
+              <span>MEAT</span>
+              <span>GOOD TIME</span>
+            </div>
+            <div class="poster-date">
+              <strong>2026. 05. 04 MON</strong>
+              <span>火を囲んで、食べて、しゃべって、のんびり集まる日。</span>
+            </div>
+          </div>
+
+          <div class="hero-copy">
+            <p>
+              ゴールデンウィークの真ん中、炭火の香りと一緒に集まるBBQパーティを開催します。
+              しっかり食べたい人も、ゆるく顔を出したい人も、5月4日は空けておいてください。
+            </p>
+            <div class="tag-row" aria-label="イベントの特徴">
+              <span class="tag">2026年5月4日開催</span>
+              <span class="tag">屋外でゆるく集合</span>
+              <span class="tag">家族・友人参加OK</span>
+              <span class="tag">差し入れ歓迎</span>
+            </div>
+          </div>
+
+          <div class="countdown" aria-labelledby="countdown-title">
+            <div class="countdown-head" id="countdown-title">開催までカウントダウン</div>
+            <div class="countdown-grid">
+              <div class="count-box">
+                <strong id="days">00</strong>
+                <span>日</span>
+              </div>
+              <div class="count-box">
+                <strong id="hours">00</strong>
+                <span>時間</span>
+              </div>
+              <div class="count-box">
+                <strong id="minutes">00</strong>
+                <span>分</span>
+              </div>
+              <div class="count-box">
+                <strong id="seconds">00</strong>
+                <span>秒</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="button" type="button" id="calendarButton">5/4をカレンダーに追加</button>
+            <button class="button alt" type="button" id="copyButton">参加メッセージをコピー</button>
+          </div>
+
+          <div class="micro-copy">
+            開催場所の詳細や会費の最終案内は、参加メンバーへ個別に共有します。
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="details">
+          <div class="container">
+            <div class="section-title">
+              <div class="kicker">EVENT DETAILS</div>
+              <h2>イベント詳細</h2>
+              <div class="bar" aria-hidden="true"></div>
+            </div>
+
+            <div class="detail-grid">
+              <article class="detail-card">
+                <div class="label">開催日</div>
+                <p class="big">5 / 4</p>
+                <p class="subline">2026年 月曜日</p>
+                <div class="stack">
+                  <div class="mini-panel">ゴールデンウィークの真ん中に開催</div>
+                  <div class="detail-note">
+                    当日は一日ゆるく楽しめるBBQデー。
+                    詳細スケジュールは参加者へ追ってご案内します。
+                  </div>
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="label">会場案内</div>
+                <p class="big">OUTDOOR<br />BBQ SPOT</p>
+                <p class="subline">屋外で炭火を囲むスタイル</p>
+                <div class="detail-note">
+                  正確な場所は参加メンバーに個別共有します。
+                  雨天時も無理なく集まれるよう調整予定です。
+                </div>
+              </article>
+
+              <article class="detail-card">
+                <div class="label">参加メモ</div>
+                <p class="big">気軽に参加<br />ゆるく合流</p>
+                <p class="subline">途中参加や差し入れも歓迎</p>
+                <div class="pill-row">
+                  <span class="pill">家族参加OK</span>
+                  <span class="pill">友だち参加OK</span>
+                  <span class="pill">差し入れ歓迎</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="notice-panel">
+              <div class="section-title">
+                <div class="kicker">WHAT TO BRING</div>
+                <h2>持ち物メモ</h2>
+                <div class="bar" aria-hidden="true"></div>
+              </div>
+              <div class="notice-grid">
+                <div class="notice-card">
+                  <strong>WEAR</strong>
+                  動きやすい服装と、少し汚れても気にならないスタイルがおすすめです。
+                </div>
+                <div class="notice-card">
+                  <strong>DRINK</strong>
+                  好きな飲み物やマイカップがあると、さらに快適に過ごせます。
+                </div>
+                <div class="notice-card">
+                  <strong>PLUS ONE</strong>
+                  タレ、調味料、おつまみなどの差し入れも大歓迎です。
+                </div>
+                <div class="notice-card">
+                  <strong>WEATHER</strong>
+                  夕方に備えて、羽織れるものが一枚あると安心です。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section highlight-section" id="menu">
+          <div class="container">
+            <div class="callout-panel">
+              <div class="section-title">
+                <div class="kicker">BBQ HIGHLIGHTS</div>
+                <h2>イベント内容</h2>
+                <div class="bar" aria-hidden="true"></div>
+              </div>
+
+              <div class="headline-box">
+                <h3>火を囲むだけで、ちゃんとイベントになる。</h3>
+                <p>
+                  肉も野菜も焼きそばも、デザートも。
+                  炭火の前でそれぞれ好きなペースで楽しめる、松田家らしいBBQパーティです。
+                </p>
+              </div>
+
+              <div class="menu-grid">
+                <article class="menu-card">
+                  <div class="menu-icon" aria-hidden="true">MEAT</div>
+                  <strong>肉しっかり</strong>
+                  <p>メインの肉はしっかり焼いて、最初から最後まで満足感のあるラインナップに。</p>
+                </article>
+                <article class="menu-card">
+                  <div class="menu-icon" aria-hidden="true">GRILL</div>
+                  <strong>炭火の香り</strong>
+                  <p>焼き目、煙、香ばしさまで含めてBBQ。火の前でつまむ時間を主役にします。</p>
+                </article>
+                <article class="menu-card">
+                  <div class="menu-icon" aria-hidden="true">VEGGIE</div>
+                  <strong>野菜もちゃんと</strong>
+                  <p>とうもろこし、きのこ、ピーマンなど、焼くと映える野菜も散りばめます。</p>
+                </article>
+                <article class="menu-card">
+                  <div class="menu-icon" aria-hidden="true">SWEET</div>
+                  <strong>締めまで楽しい</strong>
+                  <p>焼きマシュマロや甘いものなど、最後まで火を囲んで楽しめる一日仕様です。</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="flow">
+          <div class="container">
+            <div class="section-title">
+              <div class="kicker">HOW WE ENJOY</div>
+              <h2>当日の楽しみ方</h2>
+              <div class="bar" aria-hidden="true"></div>
+            </div>
+
+            <div class="flow-grid">
+              <article class="flow-card">
+                <span class="step">STEP 01</span>
+                <h3>まずは集合して火を起こす</h3>
+                <p>最初はゆるく集合。火の準備から始めて、香りが立ってきたらパーティ開始です。</p>
+              </article>
+              <article class="flow-card">
+                <span class="step">STEP 02</span>
+                <h3>焼きながら食べてしゃべる</h3>
+                <p>立っていても座っていてもOK。好きなものを焼いて、好きなテンポで楽しみます。</p>
+              </article>
+              <article class="flow-card">
+                <span class="step">STEP 03</span>
+                <h3>最後までゆっくり過ごす</h3>
+                <p>食後ものんびり。写真を撮ったり、おしゃべりしたり、GWらしい時間で締めます。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section final-cta" id="entry">
+          <div class="container">
+            <div class="cta-panel">
+              <h2>2026年5月4日、BBQの日にしておいてください。</h2>
+              <p>
+                まずは予定を押さえておけば十分です。
+                カレンダーに追加して、参加メッセージをそのまま幹事へ送れるようにしてあります。
+              </p>
+              <div class="cta-actions">
+                <button class="button" type="button" id="calendarButtonBottom">カレンダーに追加</button>
+                <button class="button alt" type="button" id="copyButtonBottom">参加メッセージをコピー</button>
+              </div>
+              <div class="status" id="statusMessage" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p>松田家 BBQ PARTY LP | Date: 2026.05.04 | Fire up and enjoy the day.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const eventDate = new Date("2026-05-04T00:00:00+09:00");
+      const countdownIds = {
+        days: document.getElementById("days"),
+        hours: document.getElementById("hours"),
+        minutes: document.getElementById("minutes"),
+        seconds: document.getElementById("seconds"),
+      };
+
+      function pad(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = eventDate.getTime() - now.getTime();
+
+        if (diff <= 0) {
+          countdownIds.days.textContent = "00";
+          countdownIds.hours.textContent = "00";
+          countdownIds.minutes.textContent = "00";
+          countdownIds.seconds.textContent = "00";
+          return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const days = Math.floor(totalSeconds / (60 * 60 * 24));
+        const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+        const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+        const seconds = totalSeconds % 60;
+
+        countdownIds.days.textContent = pad(days);
+        countdownIds.hours.textContent = pad(hours);
+        countdownIds.minutes.textContent = pad(minutes);
+        countdownIds.seconds.textContent = pad(seconds);
+      }
+
+      function buildIcs() {
+        return [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//Matsuda Family BBQ//JP",
+          "CALSCALE:GREGORIAN",
+          "BEGIN:VEVENT",
+          "UID:matsuda-bbq-20260504@example.com",
+          "DTSTAMP:20260406T000000Z",
+          "DTSTART;VALUE=DATE:20260504",
+          "DTEND;VALUE=DATE:20260505",
+          "SUMMARY:松田家 BBQ PARTY",
+          "DESCRIPTION:2026年5月4日に開催する松田家BBQパーティです。",
+          "END:VEVENT",
+          "END:VCALENDAR",
+        ].join("\r\n");
+      }
+
+      function downloadCalendar() {
+        const blob = new Blob([buildIcs()], { type: "text/calendar;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = "matsuda-bbq-party-2026-05-04.ics";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+        URL.revokeObjectURL(url);
+        setStatus("カレンダーファイルをダウンロードしました。");
+      }
+
+      async function copyMessage() {
+        const text =
+          "5/4の松田家BBQ、参加予定です。詳細連絡をお願いします。";
+
+        try {
+          await navigator.clipboard.writeText(text);
+          setStatus("参加メッセージをコピーしました。");
+        } catch (error) {
+          setStatus("コピーできなかったため、この文面を使ってください: " + text);
+        }
+      }
+
+      function setStatus(message) {
+        document.getElementById("statusMessage").textContent = message;
+      }
+
+      [
+        "calendarButton",
+        "calendarButtonBottom",
+      ].forEach((id) => document.getElementById(id).addEventListener("click", downloadCalendar));
+
+      ["copyButton", "copyButtonBottom"].forEach((id) =>
+        document.getElementById(id).addEventListener("click", copyMessage)
+      );
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
